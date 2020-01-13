@@ -8,7 +8,7 @@ function CountdownTimer() {
 
     if (difference > 0) {
       timeLeft = {
-        weeks: Math.floor(difference / (1000 * 60 * 60 * 24) % 7),
+        weeks: Math.floor(difference / (1000 * 60 * 60 * 24) / 7),
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
@@ -43,7 +43,7 @@ function CountdownTimer() {
 
   return (
     <div>
-      <h1>Countdown to See NICK heart &lt 3 </h1>
+      <h1>Countdown to See NICK heart </h1>
       <h2>With React Hooks!</h2>
       {timerComponents.length ? timerComponents : <span>Time To See NICK</span>}
     </div>
