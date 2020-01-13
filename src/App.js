@@ -44,15 +44,25 @@ function CountdownTimer() {
   });
 
 
-  const startDate = +new Date("2020-01-04");
-  const finishDate = +new Date("2020-03-27");
+  const startDate = +new Date("January 4 2020");
+  const finishDate = +new Date("March 23 2020");
   const todayDate = +new Date();
-  const percentageDone = 100 * (todayDate - startDate) / (finishDate - startDate) ;
+  const percentageDone = Math.floor(100 * (todayDate - startDate) / (finishDate - startDate)) ;
+
+
+  let todayDay = +new Date().getDay;
+
+  let dateNights = 0;
+    while (startDate == finishDate) {
+      if (todayDay == 6)
+        dateNights++;
+     }
 
   return (
     <div>
       <h1>Countdown to See NICK heart </h1>
       {timerComponents.length ? timerComponents : <span>Time To See NICK</span>}
+      <h2>That's {dateNights} date nights to go</h2>
       <h2>You're {percentageDone} % of the way there!</h2>
     </div>
   );
