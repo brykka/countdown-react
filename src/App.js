@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 function CountdownTimer() {
   const calculateTimeLeft = () => {
@@ -63,7 +65,9 @@ function CountdownTimer() {
     <div class="app">
       <h1>Countdown to See NICK 💘 </h1>
       {timerComponents.length ? timerComponents : <span>Time To See NICK</span>}
-      <h2>You're {percentageDone} % of the way there!</h2>
+      <h2>You're <CircularProgressbar value={percentageDone} text={`${percentageDone}%`} /> of the way there!</h2>
+
+
     </div>
   );
 }

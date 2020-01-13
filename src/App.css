@@ -35,3 +35,8 @@ background: linear-gradient(58deg, rgba(93,170,235,1) 0%, rgba(232,160,231,1) 53
   margin-top: 15vh;
 }
 
+
+.CircularProgressbar {
+  height: 8vh;
+  width: 14% !important;
+}
