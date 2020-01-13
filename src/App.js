@@ -37,9 +37,11 @@ function CountdownTimer() {
     }
 
     timerComponents.push(
-      <span>
-        {timeLeft[interval]} {interval}{" "}
-      </span>
+      <div class="times">
+        <span class="timerComponents">
+          {timeLeft[interval]} {interval}{" "}
+        </span>
+      </div>
     );
   });
 
@@ -53,16 +55,14 @@ function CountdownTimer() {
   let todayDay = +new Date().getDay;
 
   let dateNights = 0;
-    while (startDate == finishDate) {
-      if (todayDay == 6)
-        dateNights++;
-     }
+    while (todayDate < startDate && todayDate > finishDate) {
+      if (todayDay === 6) dateNights++;
+    }
 
   return (
-    <div>
-      <h1>Countdown to See NICK heart </h1>
+    <div class="app">
+      <h1>Countdown to See NICK 💘 </h1>
       {timerComponents.length ? timerComponents : <span>Time To See NICK</span>}
-      <h2>That's {dateNights} date nights to go</h2>
       <h2>You're {percentageDone} % of the way there!</h2>
     </div>
   );

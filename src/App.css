@@ -2,7 +2,33 @@ h1, h2 {
   text-align: center;
 }
 
-span {
-  color: red;
+body {
+  height: 100vh;
+ background: rgb(93,170,235);
+background: linear-gradient(58deg, rgba(93,170,235,1) 0%, rgba(232,160,231,1) 53%, rgba(250,199,228,1) 72%);
+}
+
+.times {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.timerComponents {
+  padding: 5px;
+}
+
+
+.app {
+  border-radius: 10px;
+  background-color: white;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 50vh;
+  margin-top: 15vh;
 }
 
