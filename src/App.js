@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import "./App.css";
-import DateNights from "./DateNights.js";
+// import DateNights from "./DateNights.js";
 import GetPercentageDone from "./GetPercentageDone.js";
 
 
@@ -84,7 +84,6 @@ function CountdownTimer() {
 
         of the way there!</h2>
 
-        <h2>That's {DateNights} left to go</h2>
 
     </div>
     );

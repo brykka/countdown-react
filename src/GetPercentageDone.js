@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
 
-class GetPercentageDone extends React.Component {
+export default class GetPercentageDone extends React.Component {
   render(){
     const startDate = +new Date("January 4 2020");
     const finishDate = +new Date("March 23 2020");
@@ -12,5 +12,4 @@ class GetPercentageDone extends React.Component {
   }
 }
 
-export {GetPercentageDone};
 

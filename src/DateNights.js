@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import {getPercentageDone} from "GetPercentageDone.js";
 
-class DateNights extends React.Component{
-  render() {
+export default class DateNights extends React.Component{
+  render(){
     let dateNights = 0;
 
     while(today <= finishDate) {
@@ -18,4 +18,3 @@ class DateNights extends React.Component{
   }
 }
 
-export default DateNights;
