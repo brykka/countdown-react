@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import "./App.css";
-import {DateNights} from "./DateNights.js";
-import {getPercentageDone} from "./GetPercentageDone.js";
+import DateNights from "./DateNights.js";
+import GetPercentageDone from "./GetPercentageDone.js";
 
 
 function CountdownTimer() {
@@ -55,8 +55,8 @@ function CountdownTimer() {
       <h1>Countdown to See NICK 💘 </h1>
       {timerComponents.length ? timerComponents : <span>Time To See NICK</span>}
       <h2>You're <CircularProgressbar
-        value={getPercentageDone}
-        text={`${getPercentageDone}%`}
+        value={GetPercentageDone}
+        text={`${GetPercentageDone}%`}
 
         styles={buildStyles({
         // Rotation of path and trail, in number of turns (0-1)
@@ -75,7 +75,7 @@ function CountdownTimer() {
         pathTransition: 'none',
 
         // Colors
-        pathColor: `rgba(62, 152, 199, ${getPercentageDone})`,
+        pathColor: `rgba(62, 152, 199, ${GetPercentageDone})`,
         textColor: 'red',
         trailColor: '#d6d6d6',
         backgroundColor: '#3e98c7',
