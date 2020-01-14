@@ -3,6 +3,14 @@ h1, h2 {
   font-family: 'Caveat', cursive;
 }
 
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
 body {
   height: 100vh;
  background: rgb(93,170,235);
@@ -26,12 +34,12 @@ background: linear-gradient(58deg, rgba(93,170,235,1) 0%, rgba(232,160,231,1) 53
 .app {
   border-radius: 10px;
   background-color: white;
-  width: 50vw;
+  width: 60%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  height: 50vh;
+  height: 50%;
   margin-top: 15vh;
 }
 

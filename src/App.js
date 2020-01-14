@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
-import { CircularProgressbar } from 'react-circular-progressbar';
+import "./CircularProgressbar.js";
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { getPercentageDone } from "./GetPercentageDone.js";
 
 function CountdownTimer() {
   const calculateTimeLeft = () => {
@@ -47,32 +49,40 @@ function CountdownTimer() {
     );
   });
 
-
-  const startDate = +new Date("January 4 2020");
-  const finishDate = +new Date("March 23 2020");
-  const todayDate = +new Date();
-  const percentageDone = Math.floor(100 * (todayDate - startDate) / (finishDate - startDate)) ;
-
-
-  let todayDay = +new Date().getDay;
-
-  let dateNights = 0;
-    while (todayDate < startDate && todayDate > finishDate) {
-      if (todayDay === 6) dateNights++;
-    }
-
   return (
     <div class="app">
       <h1>Countdown to See NICK 💘 </h1>
       {timerComponents.length ? timerComponents : <span>Time To See NICK</span>}
-      <h2>You're <CircularProgressbar value={percentageDone} text={`${percentageDone}%`} /> of the way there!</h2>
+      <h2>You're <CircularProgressbar
+  value={getPercentageDone}
+  text={`${getPercentageDone}%`}
+  styles={buildStyles({
+  // Rotation of path and trail, in number of turns (0-1)
+  rotation: 0.25,
 
+  // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
+  strokeLinecap: 'butt',
 
+  // Text size
+  textSize: '16px',
+
+  // How long animation takes to go from one percentage to another, in seconds
+  pathTransitionDuration: 0.5,
+
+  // Can specify path transition in more detail, or remove it entirely
+  // pathTransition: 'none',
+
+  // Colors
+  pathColor: `rgba(62, 152, 199, ${getPercentageDone})`,
+  textColor: 'red',
+  trailColor: '#d6d6d6',
+  backgroundColor: '#3e98c7',
+  })}
+/>
+ of the way there!</h2>
     </div>
-  );
-}
-
-
+    );
+  }
 
 export default CountdownTimer;
 
